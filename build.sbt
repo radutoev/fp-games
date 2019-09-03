@@ -4,10 +4,14 @@ version := "0.0.1"
 
 scalaVersion := "2.13.0"
 
+val catsVersion = "2.0.0-RC2"
 val zioVersion = "1.0.0-RC11-1"
+val zioInteropCatsVersion = "2.0.0.0-RC2"
 
 libraryDependencies ++= Seq(
-  "dev.zio" % "zio_2.13" % "1.0.0-RC11-1"
+  "org.typelevel" %% "cats-core" % catsVersion,
+  "dev.zio" % "zio_2.13" % zioVersion,
+  "dev.zio" % "zio-interop-cats_2.13" % zioInteropCatsVersion
 )
 
 
